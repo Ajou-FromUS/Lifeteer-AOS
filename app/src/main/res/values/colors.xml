@@ -7,4 +7,14 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="mindset_main_green">#62AA7F</color>
+    <color name="mindset_main_background">#FFFFFF</color>
+    <color name="mindset_main_black">#232323</color>
+    <color name="mindset_error_red">#BA1A1A</color>
+    <color name="mindset_disabled_text">#A1A1A1</color>
+    <color name="mindset_disabled_fill">#E3E3E3</color>
+    <color name="kakaotalk_yellow">#FFE500</color>
+    <color name="mindset_calendar">#E0EEE5</color>
+    <color name="transparent">#00000000</color>
 </resources>
