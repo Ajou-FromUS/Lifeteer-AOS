@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
             when (MenuItem.itemId) {
                 R.id.mindset -> {
                     replaceFragment(FragmentMindset())
-                    setLinearLayout(0, "")
+                    setLinearLayout(0, "마음짓기")
                 }
                 R.id.diary -> {
                     replaceFragment(FragmentDiary())
