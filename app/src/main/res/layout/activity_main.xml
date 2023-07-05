@@ -1,35 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
+<androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context="presentation.MainActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
-            android:layout_height="wrap_content"
+    <LinearLayout
+            android:id="@+id/fragMain_linear"
             android:layout_width="match_parent"
-            android:theme="@style/Theme.LifeteerAOS.AppBarOverlay">
+            android:layout_height="54dp"
+            android:background="@drawable/rectangle_top"
+            android:elevation="10dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+    </LinearLayout>
 
-        <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:background="?attr/colorPrimary"
-                app:popupTheme="@style/Theme.LifeteerAOS.PopupOverlay"
-                android:layout_height="?attr/actionBarSize"/>
+    <FrameLayout
+            android:id="@+id/main_frameLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/bnv_main"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragMain_linear"
+            app:layout_constraintVertical_bias="1.0">
+    </FrameLayout>
 
-    </com.google.android.material.appbar.AppBarLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bnv_main"
+            android:layout_width="0dp"
+            android:layout_height="71dp"
+            android:paddingBottom="5dp"
+            app:itemIconSize="30dp"
 
-    <include layout="@layout/content_main"/>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_marginEnd="@dimen/fab_margin"
-            android:layout_marginBottom="16dp"
-            app:srcCompat="@android:drawable/ic_dialog_email"/>
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:background="@color/design_default_color_background"
+            app:itemBackground="@drawable/bnv_indicator"
+            app:labelVisibilityMode="labeled"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/menu_bnv_main" />
+</androidx.constraintlayout.widget.ConstraintLayout>
