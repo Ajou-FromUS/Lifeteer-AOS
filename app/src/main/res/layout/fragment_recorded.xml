@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="presentation.MainActivity"
+             android:id="@+id/frag_recorded">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+    >
+
+        <TextView
+                android:id="@+id/fragrecorded_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretendard_regular"
+                android:text="음성유언"
+                android:textColor="@color/mindset_main_black"
+                android:textSize="20sp"
+                android:layout_marginTop="13dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+                android:id="@+id/fragrecorded_linear"
+                android:layout_width="335dp"
+                android:layout_height="196dp"
+                android:layout_marginTop="36dp"
+                android:background="@color/mindset_disabled_fill"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fragrecorded_title"
+                android:orientation="vertical">
+
+        </LinearLayout>
+        <TextView
+                android:id="@+id/fragrecorded_txtExplain"
+                android:layout_width="335dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="52dp"
+                android:text="음성유언 탭 설명"
+                android:fontFamily="@font/pretendard_regular"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@+id/fragrecorded_linear"
+        />
+        <TextView
+                android:id="@+id/fragrecorded_txtSpecific"
+                android:layout_width="335dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="많은 사람들이 생소해하는 음성유언, 효력이 있는 유언의\n형태 중 하나라는 것을 알고 계셨나요? 음성유언 탭은 이런\n음성유언을 어떻게 하면 좋을지 알려주기 위해 탄생했어요!"
+                android:fontFamily="@font/pretendard_regular"
+                android:textSize="14sp"
+                android:lineHeight="22sp"
+                android:textColor="@color/mindset_disabled_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fragrecorded_txtExplain"
+        />
+        <TextView
+                android:id="@+id/fragrecorded_txtWarn"
+                android:layout_width="335dp"
+                android:layout_height="wrap_content"
+                android:text="\n음성유언 탭의 음성유언 시뮬레이션은 단순 체험적 기능이므로 법적효력이 없음을 알려드립니다"
+                android:fontFamily="@font/pretendard_bold"
+                android:textSize="14sp"
+                android:lineHeight="22sp"
+                android:textColor="@color/mindset_main_green"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fragrecorded_txtSpecific"
+        />
+        <CheckBox
+                android:id="@+id/fragrecorded_chkWarn"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginTop="63dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fragrecorded_txtWarn"
+        />
+        <TextView
+                android:id="@+id/fragrecorded_txtChk"
+                android:layout_width="265dp"
+                android:layout_height="19dp"
+                android:layout_marginTop="66.5dp"
+                android:layout_marginStart="12dp"
+                android:gravity="center_vertical"
+                android:text="이 음성유언은 법적효력이 없음을 확인하였습니다."
+                android:fontFamily="@font/pretendard_regular"
+                android:textSize="12sp"
+                android:textColor="@color/mindset_main_green"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/fragrecorded_chkWarn"
+                app:layout_constraintTop_toBottomOf="@+id/fragrecorded_txtWarn"
+        />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
