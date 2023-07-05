@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="com.example.lifeteer_aos.presentation.MainActivity">
+    <item android:id="@+id/mindset"
+          android:title="마음짓기"
+          android:icon="@drawable/selector_mindset_icon"/>
+    <item android:id="@+id/diary"
+          android:title="일기"
+    android:icon="@drawable/selector_diary_icon"/>
+    <item android:id="@+id/recorded"
+          android:title="음성유언"
+            android:icon="@drawable/selector_recorded_icon"/>
+    <item android:id="@+id/mypage"
+          android:title="마이페이지"
+          android:icon="@drawable/selector_mypage_icon"
+    />
+
+</menu>
