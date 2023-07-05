@@ -1,3 +1,5 @@
+# Local configuration file (sdk path, etc)
+local.properties
 .DS_Store
 
 #Gradle files
