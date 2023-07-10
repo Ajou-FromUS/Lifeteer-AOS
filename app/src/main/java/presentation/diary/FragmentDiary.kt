@@ -36,8 +36,8 @@ class FragmentDiary : Fragment() {
         }
         val currentDate = LocalDate.now()
         val currentMonth = YearMonth.now()
-        val startDate = currentMonth.minusMonths(1).atStartOfMonth() // Adjust as needed
-        val endDate = currentMonth.plusMonths(6).atEndOfMonth()  // Adjust as needed
+        val startDate = currentDate.plusDays(0)
+        val endDate = currentDate.plusDays(0) // Adjust as needed
         val daysOfWeek = daysOfWeek()
         with(binding) {
             weekCalendarView.setup(startDate, endDate, daysOfWeek.first())
