@@ -12,16 +12,10 @@
             android:theme="@style/Theme.LifeteerAOS"
             tools:targetApi="31">
         <activity
-                android:name=".fragmentMyPage"
+                android:name="presentation.login.LoginActivity"
                 android:exported="false"/>
         <activity
-                android:name=".fragmentMindset"
-                android:exported="false"/>
-        <activity
-                android:name=".fragmentDiary"
-                android:exported="false"/>
-        <activity
-                android:name=".fragmentRecord"
+                android:name="presentation.splash.SplashActivity"
                 android:exported="false"/>
         <activity
                 android:name="presentation.MainActivity"
@@ -30,7 +24,6 @@
                 android:theme="@style/Theme.LifeteerAOS.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
