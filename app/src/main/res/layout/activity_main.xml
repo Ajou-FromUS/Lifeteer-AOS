@@ -11,7 +11,7 @@
             android:id="@+id/fragMain_linear"
             android:layout_width="match_parent"
             android:layout_height="54dp"
-            android:background="@drawable/rectangle_top"
+            android:background="@drawable/action_bar_basic"
             android:elevation="10dp"
             android:orientation="horizontal"
             android:gravity="center"
