@@ -9,7 +9,7 @@ import android.view.View
 import android.view.animation.AnimationUtils
 import com.example.lifeteer_aos.R
 import com.example.lifeteer_aos.databinding.ActivitySplashBinding
-import presentation.login.LoginActivity
+import presentation.landing.LandingActivity
 
 class SplashActivity : AppCompatActivity() {
     private val handler = Handler(Looper.getMainLooper())
@@ -28,7 +28,7 @@ class SplashActivity : AppCompatActivity() {
 
     private fun moveNext(){
         handler.postDelayed({
-            val intent = Intent(this, LoginActivity::class.java)
+            val intent = Intent(this, LandingActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
             startActivity(intent)
             finish()

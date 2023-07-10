@@ -21,10 +21,9 @@
             android:id="@+id/tv_time_to_mindset"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/pretendard_regular"
+            android:textAppearance="@style/AOS_b1"
             android:text="@string/time_to_mindset"
             android:textColor="@color/mindset_main_green"
-            android:textSize="16sp"
             app:layout_constraintTop_toBottomOf="@id/iv_mindset_bi"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"/>
@@ -33,10 +32,9 @@
             android:id="@+id/tv_mindset"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/pretendard_bold"
+            android:textAppearance="@style/AOS_h0"
             android:text="@string/mindset"
             android:textColor="@color/mindset_main_green"
-            android:textSize="20sp"
             app:layout_constraintTop_toBottomOf="@id/tv_time_to_mindset"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"/>
