@@ -6,6 +6,10 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="main_menu_mindset">마음짓기</string>
+    <string name="main_menu_diary">일기</string>
+    <string name="main_menu_recorded">음성유언</string>
+    <string name="main_menu_mypage">마이페이지</string>
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
