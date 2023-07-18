@@ -2,12 +2,64 @@
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
              tools:context="presentation.landing.FragmentLandingFourth">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment"/>
+            android:layout_height="match_parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottie_meditation"
+                android:layout_width="330dp"
+                android:layout_height="220dp"
+                android:layout_marginTop="180dp"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/landingpage_meditation"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.642"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+                android:id="@+id/tv_do_not_rush"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="81dp"
+                android:text="@string/do_not_rush"
+                android:textColor="@color/mindset_main_black"
+                android:textAppearance="@style/AOS_h0"
+                app:layout_constraintTop_toBottomOf="@+id/lottie_meditation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:lineSpacingMultiplier="1.2"
+                android:text="@string/landing_mindset_fourth"
+                android:textColor="@color/mindset_disabled_text"
+                android:textAppearance="@style/AOS_b2"
+                app:layout_constraintTop_toBottomOf="@+id/tv_do_not_rush"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        <Button
+                android:id="@+id/btn_start_mindset"
+                android:layout_width="320dp"
+                android:layout_height="48dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_round"
+                android:text="@string/start_mindset"
+                android:textColor="@color/mindset_main_background"
+                android:textAppearance="@style/AOS_b1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                style="?android:attr/borderlessButtonStyle"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

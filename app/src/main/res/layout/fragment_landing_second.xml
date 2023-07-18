@@ -2,12 +2,49 @@
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
              tools:context="presentation.landing.FragmentLandingSecond">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment"/>
+            android:layout_height="match_parent">
+
+        <ImageView
+                android:id="@+id/iv_landing_second"
+                android:layout_width="400dp"
+                android:layout_height="335dp"
+                android:layout_marginTop="134dp"
+                android:src="@drawable/landingpage_phone2_3x"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.4"/>
+
+        <TextView
+                android:id="@+id/tv_diary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/diary"
+                android:textColor="@color/mindset_main_black"
+                android:textAppearance="@style/AOS_h0"
+                app:layout_constraintTop_toBottomOf="@+id/iv_landing_second"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:lineSpacingMultiplier="1.2"
+                android:gravity="center"
+                android:text="@string/landing_mindset_second"
+                android:textColor="@color/mindset_disabled_text"
+                android:textAppearance="@style/AOS_b2"
+                app:layout_constraintTop_toBottomOf="@+id/tv_diary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
