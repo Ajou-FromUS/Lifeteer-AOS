@@ -16,4 +16,13 @@
     <string name="mindset">마음짓기</string>
     <string name="who_am_i">타인에게 나는,\n나에게 타인은\n어떤 존재였나요?</string>
     <string name="learn_mindset">마음짓기 알아보기</string>
+
+    <string name="landing_mindset_first">회고록, 너무 어렵게 느껴지시나요?\n어렵지 않게 백문백답 형식으로 작성해보아요.</string>
+    <string name="diary">일기</string>
+    <string name="landing_mindset_second">오늘 하루는 어땠나요? 날씨, 감정,\n그리고 일상까지 쉽게 담아봐요.</string>
+    <string name="recorded_simulation">음성유언 시뮬레이션</string>
+    <string name="landing_mindset_third">음성유언, 미리 연습하고 녹음해요.\n필수정보 하나하나 차근히 배워봐요.</string>
+    <string name="do_not_rush">서두르지 마세요!</string>
+    <string name="landing_mindset_fourth">언제든 괜찮으니 마음을 정리하고 싶을때\n찾아와 주세요. 기다리고 있을게요 :)</string>
+    <string name="start_mindset">마음짓기 시작하기</string>
 </resources>
