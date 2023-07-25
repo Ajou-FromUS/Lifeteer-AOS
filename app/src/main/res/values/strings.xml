@@ -18,6 +18,7 @@
     <string name="select_max_2">최대 2개까지 선택가능</string>
     <string name="add_max_1">최대 1개까지 추가가능</string>
     <string name="detail_record">상세기록</string>
+    <string name="load_picture">사진 불러오기</string>
     <string name="ask_today_happen">오늘 무슨 일이 있었나요?</string>
     <string name="finish_write">작성 완료하기</string>
 
