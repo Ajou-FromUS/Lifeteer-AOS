@@ -32,4 +32,10 @@
 <style name="Theme.LifeteerAOS.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
 <style name="Theme.LifeteerAOS.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="ExtendedFAB" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/mindset_main_green</item>
+        <item name="colorPrimaryVariant">@color/mindset_main_background</item>
+        <item name="colorOnPrimary">@color/mindset_main_background</item>
+    </style>
 </resources>

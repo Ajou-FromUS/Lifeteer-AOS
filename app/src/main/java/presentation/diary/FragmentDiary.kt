@@ -12,6 +12,7 @@ import com.kizitonwose.calendar.core.firstDayOfWeekFromLocale
 import com.kizitonwose.calendar.view.MonthDayBinder
 import com.kizitonwose.calendar.view.ViewContainer
 import com.kizitonwose.calendar.view.WeekDayBinder
+import com.kizitonwose.calendar.view.WeekScrollListener
 import java.time.LocalDate
 import java.time.YearMonth
 
@@ -24,25 +25,35 @@ class FragmentDiary : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentDiaryBinding.inflate(inflater, container, false)
-        binding.weekCalendarView.dayBinder = object : WeekDayBinder<DayViewContainer> {
 
-            // Called only when a new container is needed.
-            override fun create(view: View) = DayViewContainer(view)
-
-            // Called every time we need to reuse a container.
-            override fun bind(container: DayViewContainer, data: WeekDay) {
-                container.textView.text = data.date.dayOfMonth.toString()
-            }
-        }
-        val currentDate = LocalDate.now()
-        val currentMonth = YearMonth.now()
-        val startDate = currentDate.plusDays(0)
-        val endDate = currentDate.plusDays(0) // Adjust as needed
-        val daysOfWeek = daysOfWeek()
         with(binding) {
-            weekCalendarView.setup(startDate, endDate, daysOfWeek.first())
-            weekCalendarView.scrollToWeek(currentDate)
+            weekCalendarView.dayBinder = object : WeekDayBinder<DayViewContainer> {
+                // Called only when a new container is needed.
+                override fun create(view: View) = DayViewContainer(view)
+
+                // Called every time we need to reuse a container.
+                override fun bind(container: DayViewContainer, data: WeekDay) {
+                    container.day = data
+                    container.textView.text = data.date.dayOfMonth.toString()
+                }
+            }
+
+            var weekScrollListener: WeekScrollListener? = null
+            val currentDate = LocalDate.now()
+            val currentMonth = YearMonth.now()
+            val daysOfWeek = daysOfWeek()
+
+            weekCalendarView.setup(currentDate, currentDate, daysOfWeek.first())
+
+            extendedFAB.setOnClickListener {
+                when(extendedFAB.isExtended){
+                    true -> extendedFAB.shrink()
+                    false -> extendedFAB.extend()
+                }
+            }
+
         }
+
 
         return binding.root    }
 
@@ -50,4 +61,27 @@ class FragmentDiary : Fragment() {
 class DayViewContainer(view: View) : ViewContainer(view) {
     // With ViewBinding
     val textView = CalendarDayBinding.bind(view).calendarDayText
+    // Will be set when this container is bound
+    lateinit var day: WeekDay
+    private var selectedDate: LocalDate? = null
+    init {
+        view.setOnClickListener {
+            // Check the day position as we do not want to select in or out dates.
+//            if (day.position == DayPosition.MonthDate) {
+//                // Keep a reference to any previous selection
+//                // in case we overwrite it and need to reload it.
+//                val currentSelection = selectedDate
+//                if (currentSelection == day.date) {
+//                    // If the user clicks the same date, clear selection.
+//                    selectedDate = null
+//
+//                } else {
+//                    selectedDate = day.date
+//
+//                    if (currentSelection != null) {
+//                    }
+//                }
+//            }
+        }
+    }
 }

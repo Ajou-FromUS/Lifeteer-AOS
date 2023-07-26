@@ -13,6 +13,7 @@
     <string name="diary_title">일기 제목</string>
     <string name="diary_hint_text">일기 제목을 작성해주세요.</string>
     <string name="today_diary">오늘의 일기</string>
+    <string name="today_diary_write">오늘의 일기 작성</string>
     <string name="today_weather">오늘의 날씨</string>
     <string name="feeling_state">감정상태</string>
     <string name="select_max_2">최대 2개까지 선택가능</string>
